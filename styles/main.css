@@ -1,0 +1,333 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #005f73; /* Teal color for a modern look */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffff; /* White text for contrast */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero section styling */
+#hero {
+    background: linear-gradient(to right, #005f73, #0a9396); /* Teal gradient for a fresh look */
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add a subtle dark overlay for better text visibility */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay for contrast */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Enhanced shadow for readability */
+}
+
+.hero-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better contrast */
+}
+
+.hero-button {
+    display: inline-block;
+    background: #f07c57; /* Coral color for contrast */
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background: #d55b4d; /* Darker coral shade on hover */
+    transform: translateY(-2px);
+}
+
+/* About section styling */
+#about {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #e0fbfc; /* Light teal background for a calming look */
+    border-top: 6px solid #005f73; /* Dark teal border for emphasis */
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 5px solid #005f73; /* Dark teal border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#about h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    color: #023047; /* Darker blue for readability */
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+#about .section {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background: #ffffff;
+    border: 2px solid #005f73; /* Dark teal border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about .section h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #005f73; /* Dark teal color */
+    margin-bottom: 1rem;
+}
+
+#about .section ol {
+    list-style: decimal;
+    padding-left: 2rem;
+}
+
+#about .section ol li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.15rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Projects section styling */
+/* Projects container styling */
+.projects-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two-column layout with larger first column */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Individual project styling */
+.project {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Project title styling */
+.project h3 {
+    font-family: 'Pacifico', cursive;
+    color: #023047; /* Darker blue for consistency */
+    margin-top: 0;
+}
+
+/* Project images grid */
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted min width for images */
+    gap: 10px;
+}
+
+/* Styling for project images */
+.project-images img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.project-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Project paragraph styling */
+.project p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Button styling within project */
+.project a.button {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: #005f73; /* Dark teal color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for project buttons */
+.project a.button:hover {
+    background-color: #023047; /* Darker blue for hover effect */
+}
+
+/* Grid areas for specific projects */
+.project-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; /* Spans two rows */
+}
+
+.project-2 {
+    grid-column: 2 / 3;
+    grid-row: 1; /* Aligned with project-1 */
+}
+
+.project-3 {
+    grid-column: 2 / 3;
+    grid-row: 2; /* Aligned below project-2 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+    
+    #hero h1 {
+        font-size: 2.5rem; /* Smaller font size */
+    }
+    
+    #hero p {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+    
+    .hero-button {
+        padding: 10px 20px; /* Adjust padding */
+        font-size: 1rem; /* Smaller font size */
+    }
+    
+    .project {
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+/* Contact section styling */
+#contact {
+    text-align: center;
+    padding: 4rem 1rem; /* Increased padding */
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+#contact h2 {
+    margin-bottom: 1.5rem;
+    color: #023047; /* Darker blue for consistency */
+}
+
+#contact p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #005f73; /* Dark teal color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #023047; /* Darker blue for hover effect */
+}
+
+/* Footer styling */
+footer {
+    background: #005f73; /* Consistent teal color */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .button {
+    background: #f07c57; /* Coral color */
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+footer .button:hover {
+    background: #d55b4d; /* Darker coral shade */
+}
